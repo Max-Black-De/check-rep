@@ -1,0 +1,188 @@
+/* mobile 320 x 234 */
+.gadgets {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: #F8F8F8;
+}
+.gadgets__wrapper {
+    margin: 24px 0 0 16px;
+}
+.gadgets__tittle-wrapper {
+    background: linear-gradient(to right, #F8F8F8, #ffffff);
+    padding: 16px 0;
+}
+.gadgets__title {
+    white-space: normal;
+    color: #7E7E82;
+    font-size: 16px;
+    font-family: 'TT Lakes';
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+.gadgets__main-block {
+    min-width: 0px;
+    margin-top: 16px;
+}
+
+.gadgets__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+
+.gadgets__swiper::after {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    content: "";
+    background: linear-gradient(-90deg, #FFFFFF, transparent);
+    height: 160px;
+    width: 24px;
+    z-index: 1;
+}
+
+.gadgets__item {
+    box-sizing: border-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    max-width: 240px;
+    min-height: 160px;
+    background: #ffffff;
+    padding: 16px 0 0 16px;
+}
+
+.service-type {
+    color: #1B1C21;
+    font-size: 16px;
+    font-family: TT Lakes;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.service-type::before {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    content: "";
+    background-color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #FF3E79;
+    border-radius: 50%;
+}
+
+.service-type::after {
+    position: absolute;
+    bottom: 31px;
+    right: 34px;
+    content: '';
+    display: block;
+    width: 8.5px;
+    height: 8.5px;
+    border-right: 2px solid #FF3E79;
+    border-top: 2px solid #FF3E79;
+    border-radius: 20%;
+    transform: rotate(45deg);
+}
+
+.pagination-container {
+    margin-top: 16px;
+}
+
+.swiper-pagination {
+    position: static;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #979797;
+}
+
+.swiper-pagination-bullet {
+    background-color: #DDDDDD;
+}
+
+.footer {
+    background-color: #F8F8F8;
+    height: auto;
+}
+
+/* Сворачивание - разворачивание лишнего текста */
+.gadgets__checkbox:checked~.gadgets__swiper {
+    max-height: none;
+}
+.gadgets__checkbox~.gadgets__content-hider-btn::after {
+    content: "Показать всё";
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+}
+.gadgets__checkbox:checked~.gadgets__content-hider-btn::after {
+    content: "Скрыть";
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+}
+
+.gadgets__checkbox:checked~.gadgets__content-hider-btn > .gadgets__arrows {
+    transform: rotate(180deg);
+}
+
+
+/* планшет 768 x 322 */
+@media only screen and (min-width: 768px) {
+    /* создание кнопки скрытия текста */
+    .gadgets__content-hider-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-top: 24px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .gadgets__wrapper {
+        margin: 32px 0 0 24px;
+    }
+    .gadgets__main-block {
+        margin-top: 24px;
+    }
+    .gadgets__swiper {
+        max-height: 160px;
+    }
+    .pagination-container--hidden {
+        display: none;
+    }
+    .gadgets__swiper::after {
+        display: none;
+    }
+    .gadgets__list {
+        flex-wrap: wrap;
+    }
+    .gadgets__item {
+        margin: 0 24px 16px 0;
+        max-width: 224px;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .gadgets__wrapper {
+        margin: 50px 0 0 32px;
+    }
+
+    .gadgets__item {
+        margin: 0 32px 16px 0;
+        max-width: 240px;
+    }
+}

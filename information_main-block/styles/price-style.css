@@ -1,0 +1,300 @@
+.price {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: #F8F8F8;
+}
+.price__wrapper {
+    margin: 24px 0 0 16px;
+}
+.price__main-block {
+    min-width: 0px;
+}
+
+/* Хэдэр (заголовок)*/
+.price-header__title {
+    white-space: normal;
+    color: #7E7E82;
+    font-size: 16px;
+    font-family: 'TT Lakes';
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+.price-header__tittle-wrapper {
+    background: linear-gradient(to right, #F8F8F8, #ffffff);
+    padding: 16px 0;
+}
+
+/* Скрытая шапка таблицы */
+.table-hat__service {
+    flex-basis: 54.07%;
+}
+.table-hat__coast {
+    flex-basis: 13.9%;
+}
+.table-hat__date {
+    flex-basis: 31.98%;
+}
+.table-hat__text {
+    color: #7E7E82;
+    font-size: 14px;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    line-height: 16px;
+}
+
+/* Свайпер и тело таблицы */
+.price-swiper {
+    margin-top: 16px;
+}
+.price-swiper__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+.swiper-slide__container {
+    margin-top: 16px;
+}
+.price-swiper::after {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    content: "";
+    background: linear-gradient(-90deg, #FFFFFF, transparent);
+    height: 200px;
+    width: 24px;
+    z-index: 1;
+}
+.price-swiper__item {
+    box-sizing: border-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    max-width: 260px;
+    min-height: 200px;
+    background: #ffffff;
+    padding: 0 16px;
+}
+.price-swiper__item-tittle {
+    color: #7E7E82;
+    font-size: 14px;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    line-height: 16px;
+}
+.price-swiper__item-text {
+    color: #1B1C21;
+    font-size: 14px;
+    font-family: 'TT Lakes';
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+.text-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.text-button-container::after {
+    position: absolute;
+    right: 16px;
+    content: '';
+    border-right: 2px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 20%;
+    transform: rotate(45deg);
+}
+.order-button {
+    border: none;
+    border-radius: 16px;
+    background: #FF3E79;
+    width: 119px;
+    height: 32px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: left;
+    padding-left: 12px;
+    font-size: 12px;
+    font-family: 'TT Lakes';
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+}
+
+/* свойства пагинатора */
+.pagination-container {
+    margin-top: 16px;
+}
+.swiper-pagination {
+    position: static;
+}
+.swiper-pagination-bullet-active {
+    background-color: #979797;
+}
+.swiper-pagination-bullet {
+    background-color: #DDDDDD;
+}
+
+/* Информационный блок */
+.inform-block {
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+.inform-block__tax-info {
+    color: #1B1C21;
+    font-size: 14px;
+    font-family: 'TT Lakes';
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+.inform-block__offer-link {
+    margin-top: 16px;
+    display: block;
+}
+.inform-block__offer-link::after {
+    position: absolute;
+    margin: 8px;
+    content: "";
+    height: 7px;
+    width: 7px;
+    border-top: 2px solid #FF3E79;
+    border-right: 2px solid #FF3E79;
+    transform: rotate(45deg);
+}
+.inform-block__offer-text {
+    color: #1B1C21;
+    font-size: 16px;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+/* Футер(подвал) */
+/* .footer-text {
+    color: #7E7E82;
+    text-align: center;
+    font-size: 14px;
+    font-family: TT Lakes;
+    font-weight: normal;
+    line-height: 16px;
+    margin-bottom: 18px;
+    margin-top: 16px;
+} */
+
+
+/* планшет 768 x 322 */
+@media only screen and (min-width: 768px) {
+    .price__wrapper {
+        margin: 32px 0 0 24px;
+    }
+    .price__main-block {
+        margin-top: 31px;
+        margin-right: 24px;
+    }
+    .price-header__tittle-wrapper {
+        padding: 16px 0;
+    }
+    .table-hat {
+        display: flex;
+        padding: 0 16px;
+    }
+    .table-hat__wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .tittle--hidden {
+        display: none;
+    }
+    .pagination-container--hidden {
+        display: none;
+    }
+    .price-swiper__swiper::after {
+        display: none;
+    }
+    .price-swiper__list {
+        flex-direction: column;
+        background: #FFF;
+    }
+    .price-swiper__item {
+        max-width: 100%;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+    .price-swiper__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 1px solid #EAEAEA;;
+        width: 95.4545%;
+    }
+    .price-swiper__item:first-child:before {
+        border: none; 
+    }
+    .swiper-slide__container {
+        margin: 0;
+    }
+    .price-swiper__service-wrapper {
+        flex-basis: 54.07%;
+    }
+    .price-swiper__coast-wrapper {
+        flex-basis: 13.9%;
+    }
+    .price-swiper__date-wrapper {
+        flex-basis: 31.985%;
+    }
+    .inform-block {
+        margin-top: 24px;
+        margin-bottom: 80px;
+    }
+    .inform-block__wrapper {
+        max-width: 421px;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .price__wrapper {
+        margin: 50px 0 0 32px;
+    }
+    .price__main-block {
+        margin-right: 32px;
+    }
+    .table-hat {
+        padding: 0 24px;
+    }
+    .table-hat__service {
+        flex-basis: 46.63%;
+    }
+    .table-hat__coast {
+        flex-basis: 22.52%;
+    }
+    .table-hat__date {
+        flex-basis: 30.85%;
+    }
+    .price-swiper__item {
+        padding: 0 24px;
+    }
+    .price-swiper__service-wrapper {
+        flex-basis: 46.63%;
+    }
+    .price-swiper__coast-wrapper {
+        flex-basis: 22.52%;
+    }
+    .price-swiper__date-wrapper {
+        flex-basis: 30.85%;
+    }
+    .inform-block {
+        margin-top: 32px;
+        margin-bottom: 83px;
+    }
+}
